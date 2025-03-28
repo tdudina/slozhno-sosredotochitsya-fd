@@ -1,46 +1,34 @@
 :root.theme-light {
-  --main-font: 'IBM Plex mono', sans-serif;
   --bg-color: #FFF1F7;
   --text-color: #353430;
   --accent-color: #FF8DCB;
-  --h1-color: #FFC2E6;
-  --h2-color: #353430;
-  --h3-color: #353430;
-  --h4-color: #353430;
-  --h5-color: #FFC2E6;
+  --header-color: #FFC2E6;
+  --content-title-color: #353430;
+  --content-sub-title-bold-color: #353430;
+  --content-sub-title-thin-color: #353430;
+  --footer-color: #FFC2E6;
   --btn-color: #353430;
-  --btn-outline-color: #353430;
-  --btn-underline-color: #353430;
-  --link-outline-color: #353430;
-  --link-underline-color: #353430;
   --bg-image: url(../images/cover-image-light.png);
   --decoration-color: #353430;
   --decoration-text-color: #353430;
   --btn-hover-color: rgb(50, 49, 45, 0.4);
-  --link-hover-color: #353430;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --main-font: 'IBM Plex mono', sans-serif;
     --bg-color: #FFF1F7;
     --text-color: #353430;
     --accent-color: #FF8DCB;
-    --h1-color: #FFC2E6;
-    --h2-color: #353430;
-    --h3-color: #353430;
-    --h4-color: #353430;
-    --h5-color: #FFC2E6;
+    --header-color: #FFC2E6;
+    --content-title-color: #353430;
+    --content-sub-title-bold-color: #353430;
+    --content-sub-title-thin-color: #353430;
+    --footer-color: #FFC2E6;
     --btn-color: #353430;
-    --btn-outline-color: #353430;
-    --btn-underline-color: #353430;
-    --link-outline-color: #353430;
-    --link-underline-color: #353430;
     --bg-image: url(../images/cover-image-light.png);
     --decoration-color: #353430;
     --decoration-text-color: #353430;
     --btn-hover-color: rgb(50, 49, 45, 0.4);
-    --link-hover-color: #353430;
   }
 
   .rec {

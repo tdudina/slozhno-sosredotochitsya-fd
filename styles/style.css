@@ -16,6 +16,7 @@
   position: relative;
   display: grid;
   block-size: 100vh;
+  min-block-size: 668px;
   padding: 10px;
   margin-block-end: 30px;
   grid-template-rows: 1fr min-content 1fr;
@@ -94,7 +95,7 @@
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--btn-outline-color);
+  outline: 1px solid currentColor;
   pointer-events: none;
 }
 
@@ -107,17 +108,15 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  text-decoration: underline;
-  text-underline-position: under;
-  color: var(--btn-underline-color);
+  border-bottom: 1px solid currentColor;
 }
 
 .header__title {
   font-family: var(--main-font);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: bold;
-  line-height: 82.5%;
-  color: var(--h1-color);
+  line-height: 0.82em;
+  color: var(--header-color);
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
@@ -128,7 +127,7 @@ header .content__paragraph {
   font-size: 18px;
   font-weight: bold;
   color: var(--decoration-text-color);
-  line-height: 23,4%;
+  line-height: 1.3em;
 }
 
 .content {
@@ -145,8 +144,8 @@ header .content__paragraph {
   font-family: var(--main-font);
   font-size: 18px;
   font-weight: bold;
-  color: var(--h2-color);
-  line-height: 23,4%;
+  color: var(--content-title-color);
+  line-height: 1.28em;
 }
 
 .content__text-block {
@@ -162,8 +161,8 @@ header .content__paragraph {
   font-family: var(--main-font);
   font-size: 18px;
   font-weight: bold;
-  color: var(--h3-color);
-  line-height: 1.32em;
+  color: var(--content-sub-title-bold-color);
+  line-height: 1.31em;
 }
 
 .content__paragraph {
@@ -182,8 +181,8 @@ header .content__paragraph {
   font-family: var(--main-font);
   font-size: 18px;
   font-weight: normal;
-  color: var(--h4-color);
-  line-height: 23,4%;
+  color: var(--content-sub-title-thin-color);
+  line-height: 1.29em;
 }
 
 .title-decor {
@@ -217,7 +216,7 @@ header .content__paragraph {
 }
 
 .content__link:focus-visible {
-  outline: 1px solid var(--link-outline-color);
+  outline: 1px solid currentColor;
 }
 
 .content__link:hover::before {
@@ -227,7 +226,7 @@ header .content__paragraph {
   block-size: 1px;
   bottom: -1px;
   left: 2px;
-  background-color: var(--link-underline-color);
+  background-color: currentColor;
 }
 
 .gallery {
@@ -241,31 +240,7 @@ header .content__paragraph {
   gap: 10px;
 }
 
-.gallery__images .sunset__image {
-  display: block;
-  object-fit: contain;
-  max-inline-size: 100%;
-}
-
-.gallery__images .ice-cream__image {
-  display: block;
-  object-fit: contain;
-  max-inline-size: 100%;
-}
-
-.gallery__images .tape__image {
-  display: block;
-  object-fit: contain;
-  max-inline-size: 100%;
-}
-
-.gallery__images .books__image {
-  display: block;
-  object-fit: contain;
-  max-inline-size: 100%;
-}
-
-.gallery__images .street__image {
+.image {
   display: block;
   object-fit: contain;
   max-inline-size: 100%;
@@ -279,6 +254,7 @@ header .content__paragraph {
   justify-content: center;
   padding: 10px;
   block-size: 100vh;
+  min-block-size: 668px;
 }
 
 .footer__title {
@@ -286,7 +262,7 @@ header .content__paragraph {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: bold;
   line-height: 0em;
-  color: var(--h5-color);
+  color: var(--footer-color);
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
@@ -321,6 +297,7 @@ header .content__paragraph {
   .header__title {
     position: relative;
     left: -20px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   header .content__paragraph {
@@ -443,24 +420,19 @@ header .content__paragraph {
 
   .footer__title {
     line-height: 0.1em;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
 
 @media (width >= 1024px) {
   .header__theme-menu {
-    display: flex;
     flex-direction: row;
     justify-self: center;
     align-self: start;
-    margin-block-start: 0;
   }
   
   .header__theme-menu-list {
     flex-direction: row;
-  }
-
-  .header__title {
-    font-size: 157px;
   }
 
   .section {
@@ -472,7 +444,6 @@ header .content__paragraph {
   }
 
   .decrease .content__blocks {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 20px;
     grid-template-rows: 1fr;
@@ -481,14 +452,9 @@ header .content__paragraph {
   .decrease .content__title {
     grid-column: 1;
     grid-row: 1;
-    inline-size: 30%;
   }
 
   .advices {
     column-gap: 10px;
-  }
-
-  .footer__title {
-    font-size: 157px;
   }
 }
