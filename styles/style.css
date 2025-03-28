@@ -59,7 +59,7 @@
   color: var(--accent-color);
 }
 
-.rec::after  {
+.rec::after {
   content: "";
   inline-size: 9px;
   block-size: 9px;
